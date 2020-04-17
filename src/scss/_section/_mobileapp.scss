@@ -1,0 +1,96 @@
+.mobile-app-row {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mobile-app {
+  background: url("../img/background-mob-app.png") no-repeat center/cover;
+  text-align: center;
+  padding: 52px 0 80px 0;
+}
+
+.mobile-app__text {
+  font-size: 17px;
+  color: $black;
+  margin-bottom: 34px;
+}
+
+.mobile-app__item {
+  position: relative;
+  width: 320px;
+  z-index: 1;
+  margin-right: 38px;
+  margin-bottom: 20px;
+}
+
+.mobile-app-item__text {
+  position: absolute;
+  width: 300px;
+  left: 3%;
+  top: 35%;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $white;
+  z-index: 3;
+}
+
+.mobile-app-item__img {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+
+  }
+
+}
+
+.mobile-app-item__link {
+  position: relative;
+
+  &::after {
+  }
+
+}
+
+.mobile-app-item__link a {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: $black;
+  border-radius: 100%;
+  top: -70px;
+  position: relative;
+  z-index: 6;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 2px;
+    top: 12px;
+    left: 6px;
+    background: #1eacc7;
+    transform: rotate(90deg);
+    z-index: 5;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 2px;
+    top: 12px;
+    left: 6px;
+    background: #1eacc7;
+    transform: rotate(180deg);
+    z-index: 5;
+  }
+}
+

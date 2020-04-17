@@ -1,0 +1,25 @@
+.world {
+  background: url("../img/world-bg.png") no-repeat center/cover;
+  padding: 50px 0 50px 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.world__link {
+  display: inline-block;
+  margin-top: auto;
+  font-size: 15px;
+  color: #1fbad6;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.world .small-title {
+  position: static;
+}
+
+

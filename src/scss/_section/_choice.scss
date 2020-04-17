@@ -1,0 +1,36 @@
+.choice {
+  position: relative;
+  text-align: center;
+  min-height: 900px;
+
+}
+
+.choice-wrap {
+  background: url("../img/choicebg.png") no-repeat center/cover;
+  height: 400px;
+
+}
+
+.choice-wrapper {
+  background-color: #070716;
+  min-height: 500px;
+  padding-top: 55px;
+}
+
+.choice__text {
+  font-weight: 300;
+}
+
+
+.choice__bottom-text {
+  color: $black;
+  margin-bottom: 50px;
+  transform: translateY(-281px);
+}
+
+.choice-wrap__img {
+  transform: translateY(-260px);
+}
+
+
+

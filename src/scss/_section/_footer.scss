@@ -1,0 +1,128 @@
+.footer {
+  border-bottom:  8px solid #070716;
+  padding: 30px 23px 50px 23px;
+}
+
+.footer-row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__nav-wrap {
+  width: 20.3%;
+}
+
+.footer__navigation-list {
+  display: flex;
+}
+
+.footer__navigation-link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  font-size: 0;
+  text-decoration: none;
+  margin-right: 9px;
+  background: #070716 url("../icons/sprite.png") no-repeat center;
+  border-radius: 50%;
+
+  &--fb {
+    background-position: -73px 6px;
+  }
+
+  &--tw {
+    background-position: 7px 8px;
+  }
+
+  &--in {
+    background-position: 9px -31px;
+  }
+
+  &--inst {
+    background-position: -36px 8px;
+
+  }
+
+}
+
+.footer-block-wrap {
+  position: relative;
+  width: 33.3%;
+  
+  &::before {
+    position: absolute;
+    content: "";
+    width: 72%;
+    height: 4px;
+    background-color: #1fbad6;
+    top: -17px;
+    left: 50px;
+  }
+
+}
+
+.footer__first-list {
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.footer__second-list {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.footer__first-list-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #070716;
+  margin-right: 45px;
+}
+
+.footer__second-list-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #999999;
+  margin-right: 21px;
+
+}
+
+.footer__language-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 11px;
+  color: #1fbad6;
+  text-transform: uppercase;
+  margin-left: 40%;
+}
+
+.footer__stores-wrap {
+
+
+}
+
+.footer__stores-link {
+  display: inline-block;
+  width: 92px;
+  height: 26px;
+  font-size: 0;
+  text-decoration: none;
+  margin-right: 9px;
+
+  &--apple {
+    background: url("../img/footer-apple.png");
+  }
+
+  &--play {
+    background: url("../img/footer-playmarket.png");
+  }
+
+  &--win {
+    background: url("../img/footer-windows.png");
+  }
+}
+
+

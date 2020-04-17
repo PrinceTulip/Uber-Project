@@ -1,0 +1,42 @@
+.promo {
+  position: relative;
+  background: url("../img/promo-bg.png") no-repeat center/cover;
+  z-index: 2;
+  text-align: center;
+  padding-bottom: 133px;
+  padding-top: 150px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}
+
+.promo__big-heading {
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.promo__small-heading {
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+}
+
+.promo__big-paragraph {
+  font-weight: 400;
+  margin-top: 20px;
+  padding-bottom: 33px;
+}
+
+.promo__btn {
+  margin-top: 150px;
+}

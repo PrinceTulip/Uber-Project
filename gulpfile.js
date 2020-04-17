@@ -24,6 +24,7 @@ const plumber = require('gulp-plumber');
 const browserSync = require('browser-sync').create();
 const source = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
+const spritesmith = require('gulp.spritesmith');
 
 const config = {
   mode: {
@@ -41,11 +42,13 @@ const paths =  {
 function svgSpriteBuild() {
   return gulp.src(paths.src + 'icons/*.svg')
   // минифицируем svg
+      /*
     .pipe(svgmin({
       js2svg: {
         pretty: true
       }
     }))
+     */
     // удалить все атрибуты fill, style and stroke в фигурах
     .pipe(cheerio({
       run: function($) {
@@ -69,23 +72,33 @@ function styles() {
       .pipe(plumber())
       .pipe(sassGlob())
       .pipe(sass()) // { outputStyle: 'compressed' }
-      .pipe(autoprefixer())
-      .pipe(cleanCSS())
+      //.pipe(autoprefixer())//
+      //.pipe(cleanCSS()) //
       .pipe(rename({ suffix: ".min" }))
       .pipe(gulp.dest(paths.build + 'css/'))
 }
 function scripts() {
 return(
   browserify(paths.src + 'js/main.js')
-    .transform("babelify", {presets: ["@babel/preset-env"]})
+    //.transform("babelify", {presets: ["@babel/preset-env"]})//
     .bundle()
     .pipe(source("bundle.js"))
     // Turn it into a buffer!
-    .pipe(buffer())
+    //.pipe(buffer())//
     // And uglify
-    .pipe(uglify())
-  .pipe(gulp.dest(paths.build + 'js/'))
+    //.pipe(uglify())
+ // .pipe(gulp.dest(paths.build + 'js/'))
 )
+
+}
+
+function spritesPng() {
+  const spriteData = gulp.src(paths.src + 'img/iconsSprite/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.css',
+    padding: 25
+  }));
+  return spriteData.pipe(gulp.dest(paths.build + 'icons'));
 }
 
 function htmls() {
@@ -115,6 +128,7 @@ function watch() {
   gulp.watch(paths.src + '*.html', htmls);
   gulp.watch(paths.src + 'img/*', img);
   gulp.watch(paths.src + 'favicon/*', favicon);
+  gulp.watch(paths.src + 'icons/iconsSprite/*', spritesPng);
 
 }
 
@@ -136,6 +150,7 @@ exports.img = img;
 exports.favicon = favicon;
 exports.fonts = fonts;
 exports.svgSpriteBuild = svgSpriteBuild;
+exports.spritesPng = spritesPng;
 
 
 gulp.task('build', gulp.series(
@@ -145,12 +160,13 @@ gulp.task('build', gulp.series(
     htmls,
     img,
     fonts,
-    favicon
+    favicon,
+    spritesPng
     // gulp.parallel(styles, scripts, htmls, img, fonts)
 ));
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, scripts, htmls, img, svgSpriteBuild, fonts, favicon),
+    gulp.parallel(styles, scripts, htmls, img, svgSpriteBuild, fonts, favicon, spritesPng),
     gulp.parallel(watch, serve)
 ));
