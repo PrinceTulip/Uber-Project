@@ -47,13 +47,16 @@
           <div class="header-wrap">
             <div class="header__bottom-number">
               <p class="header__bottom-number-paragraph">Звоните нам ежедневно</p>
-              <p class="header__bottom-phone">8 495 797 09 88</p>
+              <a href="#" class="header__bottom-phone">8 495 797 09 88</a>
             </div>
             <button class="btn header__bottom-btn" type="button">заказать звонок</button>
           </div>
         </div>
       </div>
     </div>
+      <div class="header__burger">
+        <button class="header__burger-button"></button>
+      </div>
   </header>
   <section class="promo">
     <div class="container">
@@ -74,14 +77,15 @@
         Мы одни из партнеров и зарекомендовали себя как одна из лучших команд в городе Москве. Водители у нас
         зарабатывают от 80000 - 120000 в месяц.
       </div>
-      <div class="btn promo__btn">ОТПРАВИТЬ ЗАЯВКУ!</div>
+      <button class="btn promo__btn" type="submit">
+        ОТПРАВИТЬ ЗАЯВКУ!
+      </button>
     </div>
   </section>
-
   <section class="features">
     <div class="container">
-      <div class="features__small-title small-title">
-        <p>преимущества</p>
+      <div class="row row-title">
+        <div class="features__small-title small-title">преимущества</div>
       </div>
       <div class="features__big-title big-title">
         8 причин начать работать с нами
@@ -113,7 +117,6 @@
               Комиссия 8% + БОНУСЫ
             </div>
             <div class="features__item-paragraph">
-
               У нас минимальная комиссия и мы выплачиваем бонусы за каждую поездку, некоторые наши конкуренты оставляют
               бонусы себе. Мы работаем честно и с нами водители зарабатывают больше!
             </div>
@@ -214,7 +217,9 @@
   </section>
   <section class="mobile-app">
     <div class="container">
-      <div class="mobile-app__small-title small-title">ВОзможности</div>
+      <div class="row row-title">
+        <div class="mobile-app__small-title small-title">ВОзможности</div>
+      </div>
       <div class="mobile-app__big-title big-title">мобильное приложение убер</div>
       <div class="mobile-app__text">
         Сделайте заказ, совершите поездку и оплатите ее стоимость, используя свой мобильный телефон
@@ -293,7 +298,9 @@
   <section class="choice">
     <div class="choice-wrapper">
       <div class="container">
-        <div class="choice__small-title  small-title small-title--white">возможности</div>
+        <div class="row row-title">
+          <div class="choice__small-title  small-title small-title--white">возможности</div>
+        </div>
         <div class="choice__big-title big-title big-title--white">Выбор - отличная штука!</div>
         <div class="choice__text">Закажите автомобиль, который подходит вам по стилю и бюджету</div>
       </div>
@@ -311,7 +318,9 @@
   </section>
   <section class="requirement-conditions">
     <div class="container">
-      <div class="requirement-conditions__small-title small-title">возможности</div>
+      <div class="row row-title">
+        <div class="requirement-conditions__small-title small-title">возможности</div>
+      </div>
       <div class="requirement-conditions__big-title big-title">условия и требования</div>
       <div class="row requirement-conditions-row">
         <div class="requirement-conditions__item">
@@ -369,15 +378,15 @@
     </div>
   </section>
   <section class="world">
-    <div class="world__small-title small-title small-title--white">города</div>
+    <div class="row row-title">
+      <div class="world__small-title small-title small-title--white">города</div>
+    </div>
     <div class="world__big-title big-title big-title--white">По всему миру</div>
     <div class="world__text">Мы в вашем городе и по всему миру</div>
     <a class="world__link" href="#">посмотреть все города</a>
   </section>
-
   <div class="footer">
       <div class="row footer-row">
-
         <div class="footer__nav-wrap">
           <ul class="footer__navigation-list">
             <li class="footer__navigation-item">
@@ -394,7 +403,6 @@
             </li>
           </ul>
         </div>
-
         <div class="footer-block-wrap">
           <div class="footer__first-list">
             <a href="#" class="footer__first-list-link">на главную</a>
@@ -410,7 +418,6 @@
           </div>
             <a class="footer__language-link" href="#">русский</a>
         </div>
-
         <div class="footer__stores">
           <div class="footer__stores-wrap">
             <a href="#" class="footer__stores-link footer__stores-link--apple">apple</a>
@@ -418,12 +425,9 @@
             <a href="#" class="footer__stores-link footer__stores-link--win">windows</a>
           </div>
         </div>
-
       </div>
   </div>
-
-
 </div>
-<script src="js/main.js"></script>
+<script src="js/bundle.js"></script>
 </body>
 </html>

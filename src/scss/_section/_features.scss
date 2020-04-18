@@ -10,6 +10,7 @@
 
 .features__big-title {
   margin-bottom: 30px;
+
 }
 
 .features__item {
@@ -18,11 +19,34 @@
   margin-right: 40px;
   margin-bottom: 60px;
 
+  @include phones {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  @include small-phones {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
 }
 
 .features__item-title {
   font-size: 17px;
   color: #1eacc7;
+
+  @include phones {
+    margin-bottom: 5px;
+  }
+
+  @include small-phones {
+    margin-bottom: 5px;
+  }
+
 }
 
 .features__item-paragraph {
@@ -42,8 +66,28 @@
   background: #1eacc7;
   border-radius: 50%;
 
+  @include phones {
+    margin: 0 auto;
+    margin-bottom: 27px;
+  }
+
+  @include small-phones {
+    margin: 0 auto;
+    margin-bottom: 27px;
+  }
+
 }
 
 .features__block {
   width: 341px;
+
+  @include phones {
+    width: 290px;
+    margin: 0 auto;
+  }
+
+  @include small-phones {
+    width: 290px;
+    margin: 0 auto;
+  }
 }

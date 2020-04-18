@@ -18,8 +18,30 @@
   text-decoration: none;
 }
 
-.world .small-title {
-  position: static;
+
+.world__big-title {
+
+  @include phones {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  @include small-phones {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
 }
 
+.world__text {
+  @include phones {
+    font-size: 14px;
+    font-weight: 300;
+  }
 
+  @include small-phones {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+}

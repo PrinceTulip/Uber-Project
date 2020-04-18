@@ -1,19 +1,55 @@
 .footer {
   border-bottom:  8px solid #070716;
   padding: 30px 23px 50px 23px;
+
+  @include tablets {
+    border-bottom: none;
+  }
+
+  @include phones {
+    border-bottom: none;
+  }
+
+  @include small-phones {
+    border-bottom: none;
+  }
 }
 
 .footer-row {
   justify-content: space-between;
   align-items: center;
+
+  @include phones {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  @include small-phones {
+    display: block;
+    flex-direction: column;
+  }
+
 }
 
 .footer__nav-wrap {
   width: 20.3%;
+
+  @include phones {
+    width: 100%;
+  }
+
+  @include small-phones {
+    width: 100%;
+  }
 }
 
 .footer__navigation-list {
   display: flex;
+
+  @include tablets {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+  }
 }
 
 .footer__navigation-link {
@@ -48,6 +84,14 @@
 .footer-block-wrap {
   position: relative;
   width: 33.3%;
+
+  @include phones {
+    width: 100%;
+  }
+
+  @include small-phones {
+    width: 100%;
+  }
   
   &::before {
     position: absolute;
@@ -78,6 +122,16 @@
   text-transform: uppercase;
   color: #070716;
   margin-right: 45px;
+
+  @include phones {
+    font-size: 14px;
+    margin-right: 16px;
+  }
+
+  @include small-phones {
+    font-size: 14px;
+    margin-right: 16px;
+  }
 }
 
 .footer__second-list-link {
@@ -87,6 +141,16 @@
   text-transform: uppercase;
   color: #999999;
   margin-right: 21px;
+
+  @include phones {
+    font-size: 11px;
+    margin-right: 16px;
+  }
+
+  @include small-phones {
+    font-size: 14px;
+    margin-right: 50px;
+  }
 
 }
 
@@ -100,7 +164,13 @@
 }
 
 .footer__stores-wrap {
+  @include phones {
+    transform: translateY(225px);
+  }
 
+  @include small-phones {
+    transform: translateY(225px);
+  }
 
 }
 
@@ -124,5 +194,6 @@
     background: url("../img/footer-windows.png");
   }
 }
+
 
 

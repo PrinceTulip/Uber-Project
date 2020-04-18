@@ -87,7 +87,7 @@ return(
     //.pipe(buffer())//
     // And uglify
     //.pipe(uglify())
- // .pipe(gulp.dest(paths.build + 'js/'))
+ .pipe(gulp.dest(paths.build + 'js/'))
 )
 
 }

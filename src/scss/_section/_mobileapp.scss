@@ -21,6 +21,18 @@
   z-index: 1;
   margin-right: 38px;
   margin-bottom: 20px;
+
+  @include tablets {
+    margin: 0 auto;
+  }
+
+  @include phones {
+    margin-right: 0;
+  }
+
+  @include small-phones {
+    margin-right: 0;
+  }
 }
 
 .mobile-app-item__text {
@@ -32,6 +44,14 @@
   text-transform: uppercase;
   color: $white;
   z-index: 3;
+
+  @include phones {
+    font-size: 14px;
+  }
+
+  @include small-phones {
+    font-size: 14px;
+  }
 }
 
 .mobile-app-item__img {

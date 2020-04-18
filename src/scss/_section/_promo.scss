@@ -22,6 +22,20 @@
   font-size: 60px;
   font-weight: 700;
   text-transform: uppercase;
+
+  @include tablets {
+    margin-bottom: 30px;
+  }
+  
+  @include phones {
+    font-size: 30px;
+    margin-bottom: 34px;
+  }
+
+  @include small-phones {
+    font-size: 30px;
+    margin-bottom: 34px;
+  }
 }
 
 .promo__small-heading {
@@ -29,14 +43,58 @@
   font-weight: 500;
   text-transform: uppercase;
 
+  @include phones {
+    font-size: 20px;
+  }
+
+  @include small-phones {
+    font-size: 20px;
+  }
+
 }
 
 .promo__big-paragraph {
   font-weight: 400;
   margin-top: 20px;
   padding-bottom: 33px;
+
+  @include tablets {
+    margin-top: 40px;
+  }
+
+  @include phones {
+    display: none;
+  }
+
+  @include small-phones {
+    display: none;
+  }
+}
+
+.promo__small-paragraph {
+
+  @include phones {
+    display: none;
+  }
+
+  @include small-phones {
+    display: none;
+  }
 }
 
 .promo__btn {
   margin-top: 150px;
+
+  @include phones {
+    margin-top: 70px;
+    padding: 17px 21px;
+    font-size: 16px;
+  }
+
+  @include small-phones {
+    margin-top: 70px;
+    padding: 17px 21px;
+    font-size: 16px;
+  }
+
 }

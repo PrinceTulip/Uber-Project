@@ -1,5 +1,18 @@
 .requirement-conditions {
   padding: 70px 0 80px 0;
+
+  @include tablets {
+    padding: 45px 0 45px;
+  }
+
+
+  @include phones {
+    padding: 25px 0 25px;
+  }
+
+  @include small-phones {
+    padding: 25px 0 25px;
+  }
 }
 
 .requirement-conditions-row {
@@ -11,6 +24,16 @@
   margin-right: 100px;
   margin-bottom: 64px;
 
+  @include phones {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+  @include small-phones {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
   &:nth-child(2n) {
     margin-right: 0;
 
@@ -21,6 +44,14 @@
   font-size: 22px;
   color: #1ca8c3;
   padding-bottom: 20px;
+
+  @include phones {
+    font-size: 16px;
+  }
+
+  @include phones {
+    font-size: 16px;
+  }
 
   &.requirement-conditions__item-title--red {
     color: #ff5656;
@@ -34,6 +65,14 @@
   font-weight: 300;
   padding-bottom: 20px;
   padding-left: 32px;
+
+  @include phones {
+    font-size: 14px;
+  }
+
+  @include small-phones {
+    font-size: 14px;
+  }
 
   &::before {
     position: absolute;
@@ -57,4 +96,12 @@
   font-size: 17px;
   color: #1ca8c3;
   font-weight: 300;
+
+  @include phones {
+    font-size: 14px;
+  }
+
+  @include small-phones {
+    font-size: 14px;
+  }
 }

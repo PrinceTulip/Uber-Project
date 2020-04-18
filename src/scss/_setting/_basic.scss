@@ -39,6 +39,11 @@ p {
   display: flex;
 }
 
+img {
+  max-width: 100%;
+}
+
+
 .btn {
   display: inline-block;
   padding: 17px 21px;
@@ -52,13 +57,24 @@ p {
   font-weight: 300;
   border: none;
   cursor: pointer;
+  outline: none;
+
+  @include phones {
+    padding: 8px 8px;
+  }
+
+  @include phones {
+    padding: 8px 8px;
+  }
+}
+
+.row-title {
+  display: flex;
+  justify-content: center;
 }
 
 .small-title {
   width: 112px;
-  position: relative;
-  left: 480px;
-  top: 0;
   padding: 8px 12px;
   font-size: 11px;
   font-weight: 300;
@@ -72,7 +88,7 @@ p {
   background: $white;
   color: $black;
 }
-
+  
 }
 
 .big-title {
@@ -86,5 +102,15 @@ p {
   &.big-title--white {
     color: $white;
   }
+
+  @include phones {
+    font-size: 16px;
+  }
+
+  @include small-phones {
+    font-size: 16px;
+  }
+
+
 
 }
