@@ -8,37 +8,38 @@
 
   @include phones {
     border-bottom: none;
+    padding: 50px 20px 20px 20px;
   }
 
-  @include small-phones {
-    border-bottom: none;
-  }
 }
 
 .footer-row {
   justify-content: space-between;
   align-items: center;
 
-  @include phones {
+  @include tablets {
     display: flex;
     flex-direction: column-reverse;
   }
-  @include small-phones {
-    display: block;
-    flex-direction: column;
+
+  @include phones {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
 }
 
 .footer__nav-wrap {
-  width: 20.3%;
+  width: 22.3%;
+
+  @include tablets {
+    width: 100%;
+    order: 2;
+  }
 
   @include phones {
     width: 100%;
-  }
-
-  @include small-phones {
-    width: 100%;
+    order: 2;
   }
 }
 
@@ -49,6 +50,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 25px;
+    margin-left: 38px;
   }
 }
 
@@ -85,14 +87,19 @@
   position: relative;
   width: 33.3%;
 
+
   @include phones {
     width: 100%;
+    order: 3;
+    margin-left: 15px;
   }
 
-  @include small-phones {
+  @include tablets {
     width: 100%;
+    order: 3;
+    margin-left: 35px;
   }
-  
+
   &::before {
     position: absolute;
     content: "";
@@ -101,9 +108,24 @@
     background-color: #1fbad6;
     top: -17px;
     left: 50px;
+
+    @include tablets {
+      width: 45%;
+      top: -17px;
+      left: 169px;
+    }
+
+    @include phones {
+      top: -21px;
+      width: 80%;
+      left: 29px;
+    }
+
   }
 
 }
+
+
 
 .footer__first-list {
   margin-bottom: 14px;
@@ -113,6 +135,10 @@
 .footer__second-list {
   margin-bottom: 22px;
   text-align: center;
+
+  @include phones {
+    margin-bottom: 12px;
+  }
 }
 
 .footer__first-list-link {
@@ -126,12 +152,9 @@
   @include phones {
     font-size: 14px;
     margin-right: 16px;
+    margin-bottom: 10px;
   }
 
-  @include small-phones {
-    font-size: 14px;
-    margin-right: 16px;
-  }
 }
 
 .footer__second-list-link {
@@ -144,32 +167,51 @@
 
   @include phones {
     font-size: 11px;
-    margin-right: 16px;
+    margin-right: 54px;
+    margin-bottom: 10px;
   }
 
   @include small-phones {
-    font-size: 14px;
-    margin-right: 50px;
+    margin-right: 35px;
+    margin-bottom: 15px;
   }
 
 }
 
+.footer__language-wrap {
+  text-align: center;
+}
+
 .footer__language-link {
-  display: inline-block;
   text-decoration: none;
   font-size: 11px;
   color: #1fbad6;
   text-transform: uppercase;
-  margin-left: 40%;
+
+}
+
+.footer__stores {
+
+  @include tablets {
+    order: 1;
+  }
+
+  @include phones {
+    order: 1;
+  }
+
 }
 
 .footer__stores-wrap {
+
   @include phones {
-    transform: translateY(225px);
+    margin-left: 0;
   }
 
   @include small-phones {
-    transform: translateY(225px);
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
   }
 
 }
@@ -192,6 +234,10 @@
 
   &--win {
     background: url("../img/footer-windows.png");
+  }
+
+  @include small-phones {
+    margin-bottom: 10px;
   }
 }
 

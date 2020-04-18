@@ -26,13 +26,6 @@
     margin-bottom: 25px;
   }
 
-  @include small-phones {
-    display: block;
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 25px;
-  }
-
 }
 
 .features__item-title {
@@ -40,10 +33,6 @@
   color: #1eacc7;
 
   @include phones {
-    margin-bottom: 5px;
-  }
-
-  @include small-phones {
     margin-bottom: 5px;
   }
 
@@ -71,11 +60,6 @@
     margin-bottom: 27px;
   }
 
-  @include small-phones {
-    margin: 0 auto;
-    margin-bottom: 27px;
-  }
-
 }
 
 .features__block {
@@ -86,8 +70,4 @@
     margin: 0 auto;
   }
 
-  @include small-phones {
-    width: 290px;
-    margin: 0 auto;
-  }
 }

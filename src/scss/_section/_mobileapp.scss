@@ -30,9 +30,6 @@
     margin-right: 0;
   }
 
-  @include small-phones {
-    margin-right: 0;
-  }
 }
 
 .mobile-app-item__text {
@@ -46,12 +43,9 @@
   z-index: 3;
 
   @include phones {
-    font-size: 14px;
+    font-size: 18px;
   }
 
-  @include small-phones {
-    font-size: 14px;
-  }
 }
 
 .mobile-app-item__img {
@@ -66,17 +60,12 @@
     bottom: 0;
     background: rgba(0, 0, 0, 0.8);
     z-index: 2;
-
   }
 
 }
 
 .mobile-app-item__link {
   position: relative;
-
-  &::after {
-  }
-
 }
 
 .mobile-app-item__link a {

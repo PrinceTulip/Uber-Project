@@ -32,10 +32,6 @@
     margin-bottom: 34px;
   }
 
-  @include small-phones {
-    font-size: 30px;
-    margin-bottom: 34px;
-  }
 }
 
 .promo__small-heading {
@@ -44,10 +40,6 @@
   text-transform: uppercase;
 
   @include phones {
-    font-size: 20px;
-  }
-
-  @include small-phones {
     font-size: 20px;
   }
 
@@ -66,9 +58,6 @@
     display: none;
   }
 
-  @include small-phones {
-    display: none;
-  }
 }
 
 .promo__small-paragraph {
@@ -77,21 +66,12 @@
     display: none;
   }
 
-  @include small-phones {
-    display: none;
-  }
 }
 
 .promo__btn {
   margin-top: 150px;
 
   @include phones {
-    margin-top: 70px;
-    padding: 17px 21px;
-    font-size: 16px;
-  }
-
-  @include small-phones {
     margin-top: 70px;
     padding: 17px 21px;
     font-size: 16px;

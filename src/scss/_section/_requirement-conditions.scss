@@ -5,14 +5,10 @@
     padding: 45px 0 45px;
   }
 
-
   @include phones {
     padding: 25px 0 25px;
   }
 
-  @include small-phones {
-    padding: 25px 0 25px;
-  }
 }
 
 .requirement-conditions-row {
@@ -49,10 +45,6 @@
     font-size: 16px;
   }
 
-  @include phones {
-    font-size: 16px;
-  }
-
   &.requirement-conditions__item-title--red {
     color: #ff5656;
   }
@@ -67,10 +59,6 @@
   padding-left: 32px;
 
   @include phones {
-    font-size: 14px;
-  }
-
-  @include small-phones {
     font-size: 14px;
   }
 
@@ -101,7 +89,4 @@
     font-size: 14px;
   }
 
-  @include small-phones {
-    font-size: 14px;
-  }
 }
