@@ -20,6 +20,7 @@
 
 
 .world__big-title {
+  color: $white;
 
   @include phones {
     margin-bottom: 10px;

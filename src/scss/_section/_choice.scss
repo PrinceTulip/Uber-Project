@@ -13,7 +13,7 @@
 
 }
 
-.choice-wrap {
+.choice__wrap {
   background: url("../img/choicebg.png") no-repeat center/cover;
   height: 400px;
 
@@ -28,14 +28,20 @@
 
 }
 
+.choice__small-title {
+  background: $white;
+  color: $black;
+}
+
 .choice__big-title {
+  color: $white;
 
   @include phones {
     display: none;
   }
 }
 
-.choice-wrapper {
+.choice__wrapper {
   background-color: #070716;
   min-height: 500px;
   padding-top: 55px;
@@ -49,7 +55,6 @@
   }
 
 }
-
 
 .choice__bottom-text {
   color: $black;
@@ -66,7 +71,7 @@
 
 }
 
-.choice-wrap__img {
+.choice__img {
   transform: translateY(-260px);
 
   @include phones {

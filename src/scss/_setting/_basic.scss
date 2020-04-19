@@ -69,7 +69,6 @@ img {
 }
 
 .row-title {
-  display: flex;
   justify-content: center;
 }
 
@@ -84,11 +83,6 @@ img {
   text-align: center;
   margin-bottom: 30px;
 
-  &.small-title--white {
-  background: $white;
-  color: $black;
-}
-  
 }
 
 .big-title {
@@ -98,10 +92,6 @@ img {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 20px;
-
-  &.big-title--white {
-    color: $white;
-  }
 
   @include phones {
     font-size: 16px;

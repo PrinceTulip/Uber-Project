@@ -77,6 +77,7 @@ function styles() {
       .pipe(rename({ suffix: ".min" }))
       .pipe(gulp.dest(paths.build + 'css/'))
 }
+
 function scripts() {
 return(
   browserify(paths.src + 'js/main.js')
@@ -106,6 +107,8 @@ function htmls() {
       .pipe(plumber())
       .pipe(gulp.dest(paths.build));
 }
+
+
 function img() {
   return gulp.src(paths.src + 'img/*')
       .pipe(gulp.dest(paths.build + 'img'));
@@ -128,8 +131,7 @@ function watch() {
   gulp.watch(paths.src + '*.html', htmls);
   gulp.watch(paths.src + 'img/*', img);
   gulp.watch(paths.src + 'favicon/*', favicon);
-  gulp.watch(paths.src + 'icons/iconsSprite/*', spritesPng);
-
+  gulp.watch(paths.src + 'img/iconsSprite/*', spritesPng());
 }
 
 function serve() {
